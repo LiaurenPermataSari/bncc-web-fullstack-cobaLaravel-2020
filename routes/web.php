@@ -32,3 +32,12 @@ Route::get('/', function () {
 Route::get('/data-tables',function(){
     return view('AdminLTE.data-tables');
 });
+
+
+Route::get('/pertanyaan','question_table@index');
+Route::get('/pertanyaan/create','question_table@create');
+Route::post('/pertanyaan/store','question_table@store');
+Route::post('/pertanyaan/{pertanyaan_id}/show','question_table@show');
+Route::get('/pertanyaan/{pertanyaan_id}/edit','question_table@edit');
+Route::post('/pertanyaan/update','question_table@update');
+Route::get('/pertanyaan/{pertanyaan_id}/destroy','question_table@destroy');
